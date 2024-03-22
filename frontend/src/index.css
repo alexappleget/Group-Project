@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.app {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+}
+
+.fields {
+  height: 50%;
+  width: 50%;
+}
+
+.btn-active {
+  background-color: black;
+  color: white;
+}
+
+.home-content {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background-color: blueviolet;
+}
+
+.frontend-content {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background-color: lightcoral;
+}
+.backend-content {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background-color: greenyellow;
+}
+
+.text-content {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
