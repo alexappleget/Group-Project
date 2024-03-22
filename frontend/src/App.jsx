@@ -29,11 +29,18 @@ export default function App() {
       >
         Text
       </button>
+      <button
+        className={active === "Contact" ? "btn-active" : ""}
+        onClick={() => setActive("Contact")}
+      >
+        Contact Us
+      </button>
       <div className="fields">
         {active === "Home" && <Home />}
         {active === "Frontend" && <Frontend />}
         {active === "Backend" && <Backend />}
         {active === "Text" && <Text />}
+        {active === "Contact" && <Contact />}
       </div>
     </div>
   );
@@ -67,6 +74,23 @@ function Text() {
   return (
     <div className="text-content">
       <h1>This is Text!</h1>
+    </div>
+  );
+}
+
+function Contact() {
+  return (
+    <div className="contact-content">
+      <h1>Contact Us</h1>
+      <form>
+        <label htmlFor="name">Name:</label>
+        <input type="text" id="name" />
+        <label htmlFor="email">Email:</label>
+        <input type="text" id="email" />
+        <label htmlFor="message">Message:</label>
+        <textarea id="message" cols="30" rows="10"></textarea>
+        <button type="submit">Contact Us</button>
+      </form>
     </div>
   );
 }

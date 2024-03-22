@@ -12,8 +12,8 @@ body {
 }
 
 .fields {
-  height: 50%;
-  width: 50%;
+  height: 75%;
+  width: 75%;
 }
 
 .btn-active {
@@ -47,4 +47,25 @@ body {
   width: 100%;
   background-color: black;
   color: white;
+}
+
+.contact-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-content input,
+.contact-content textarea {
+  width: 300px;
+}
+
+.contact-content button {
+  width: 100px;
+  margin-top: 10px;
 }
