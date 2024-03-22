@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 export default function App() {
   const [active, setActive] = useState("Home");
@@ -99,22 +100,21 @@ function Contact() {
   return (
     <div className="contact-content">
       <h1>Contact Us</h1>
-      <form>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" />
-        <label htmlFor="email">Email:</label>
-        {/* will update the value of email based on what they input */}
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" cols="30" rows="10"></textarea>
-        <button onClick={handleEmail()}>Contact Us</button>
-      </form>
+      <label htmlFor="name">Name:</label>
+      <input type="text" id="name" />
+      <label htmlFor="email">Email:</label>
+      {/* will update the value of email based on what they input */}
+      <input
+        type="email"
+        id="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+      <label htmlFor="message">Message:</label>
+      <textarea id="message" cols="30" rows="10"></textarea>
+      <button onClick={handleEmail}>Contact Us</button>
+
       {/* what will be shown once the email gets sent */}
       {emailSent && (
         <p>

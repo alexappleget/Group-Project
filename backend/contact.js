@@ -1,6 +1,7 @@
 const express = require("express");
 const nodeMailer = require("nodemailer");
 const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 const port = 5174; //port it'll be running on
@@ -14,12 +15,12 @@ app.use(
 app.use(express.json());
 
 const transporter = nodeMailer.createTransport({
-  host: "###", //what email account do we want to use?
-  port: 123, //whatever port the email domain specifies
+  host: "smtp.gmail.com",
+  port: 465,
   secure: true,
   auth: {
-    user: "ouremail@email.com",
-    pass: "password",
+    user: "noreplytravelprojectemail@gmail.com",
+    pass: process.env.EMAIL_PASS,
   },
 });
 
@@ -41,13 +42,17 @@ app.post("/contact-us", async (req, res) => {
   //what the user will see in their inbox
   try {
     const info = await transporter.sendMail({
-      from: "Dev Team <ouremail@email.com",
+      from: "Dev Team <noreplydevteamhelp@yahoo.com",
       to: recipientEmail,
       subjust: "Thanks for reaching out!",
       html: html,
     });
+
+    console.log("Message sent:" + info.messageId);
+    res.status(200).send("Email sent successfully");
   } catch (err) {
     console.error(err);
+    res.status(500).send("Error sending email");
   }
 });
 
