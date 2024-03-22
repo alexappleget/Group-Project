@@ -113,7 +113,7 @@ function Contact() {
         />
         <label htmlFor="message">Message:</label>
         <textarea id="message" cols="30" rows="10"></textarea>
-        <button type="submit">Contact Us</button>
+        <button onClick={handleEmail()}>Contact Us</button>
       </form>
       {/* what will be shown once the email gets sent */}
       {emailSent && (
