@@ -42,7 +42,7 @@ app.post("/contact-us", async (req, res) => {
   //what the user will see in their inbox
   try {
     const info = await transporter.sendMail({
-      from: "Dev Team <noreplydevteamhelp@yahoo.com",
+      from: "Dev Team <noreplytravelprojectemail@gmail.com",
       to: recipientEmail,
       subjust: "Thanks for reaching out!",
       html: html,
