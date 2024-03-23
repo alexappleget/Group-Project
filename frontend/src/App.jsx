@@ -6,36 +6,38 @@ export default function App() {
 
   return (
     <div className="app">
-      <button
-        className={active === "Home" ? "btn-active" : ""}
-        onClick={() => setActive("Home")}
-      >
-        Home
-      </button>
-      <button
-        className={active === "Frontend" ? "btn-active" : ""}
-        onClick={() => setActive("Frontend")}
-      >
-        Frontend Dev
-      </button>
-      <button
-        className={active === "Backend" ? "btn-active" : ""}
-        onClick={() => setActive("Backend")}
-      >
-        Backend Dev
-      </button>
-      <button
-        className={active === "Text" ? "btn-active" : ""}
-        onClick={() => setActive("Text")}
-      >
-        Text
-      </button>
-      <button
-        className={active === "Contact" ? "btn-active" : ""}
-        onClick={() => setActive("Contact")}
-      >
-        Contact Us
-      </button>
+      <div className="navbar">
+        <button
+          className={active === "Home" ? "btn-active" : "navBtn"}
+          onClick={() => setActive("Home")}
+        >
+          Home
+        </button>
+        <button
+          className={active === "Frontend" ? "btn-active" : "navBtn"}
+          onClick={() => setActive("Frontend")}
+        >
+          Frontend Dev
+        </button>
+        <button
+          className={active === "Backend" ? "btn-active" : "navBtn"}
+          onClick={() => setActive("Backend")}
+        >
+          Backend Dev
+        </button>
+        <button
+          className={active === "Text" ? "btn-active" : "navBtn"}
+          onClick={() => setActive("Text")}
+        >
+          Text
+        </button>
+        <button
+          className={active === "Contact" ? "btn-active" : "navBtn"}
+          onClick={() => setActive("Contact")}
+        >
+          Contact Us
+        </button>
+      </div>
       <div className="fields">
         {active === "Home" && <Home />}
         {active === "Frontend" && <Frontend />}
@@ -50,7 +52,10 @@ export default function App() {
 function Home() {
   return (
     <div className="home-content">
-      <h1>This is Home!</h1>
+      <h1>PROGRAMMER</h1>
+      <div>
+        <h3>Hello World</h3>
+      </div>
     </div>
   );
 }
