@@ -6,15 +6,43 @@ body {
 
 .app {
   box-sizing: border-box;
+  position: relative;
   height: 100vh;
   width: 100%;
   padding: 20px;
   background-color: #121212;
 }
 
+/* green effects in the far corners */
+.circle1 {
+  background-color: #abdb2a;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 150px;
+  width: 150px;
+  border-radius: 0 0 0 125px;
+  z-index: 0;
+  filter: blur(115px);
+}
+
+.circle2 {
+  background-color: #abdb2a;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 150px;
+  width: 150px;
+  border-radius: 0 125px 0 0;
+  z-index: 0;
+  filter: blur(115px);
+}
+
 .navbar {
+  position: relative;
   display: flex;
   justify-content: flex-end;
+  z-index: 1;
 }
 
 .navBtn {
@@ -65,11 +93,12 @@ body {
   align-items: center;
   background-color: #abdb2a;
   margin: 0;
-  width: 60%;
+  width: 52.5%;
+  height: 40px;
 }
 
 .home-content h3 {
-  color: white;
+  color: #121212;
 }
 
 .frontend-content {

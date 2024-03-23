@@ -1,11 +1,13 @@
 import { useState } from "react";
-import Contact from "./Components/Contact";
+import Contact from "./Components/Contact.jsx";
 
 export default function App() {
   const [active, setActive] = useState("Home");
 
   return (
     <div className="app">
+      <div className="circle1"></div>
+      <div className="circle2"></div>
       <div className="navbar">
         <button
           className={active === "Home" ? "btn-active" : "navBtn"}
