@@ -1,40 +1,43 @@
 import { useState } from "react";
+import axios from "axios";
 
 export default function App() {
   const [active, setActive] = useState("Home");
 
   return (
     <div className="app">
-      <button
-        className={active === "Home" ? "btn-active" : ""}
-        onClick={() => setActive("Home")}
-      >
-        Home
-      </button>
-      <button
-        className={active === "Frontend" ? "btn-active" : ""}
-        onClick={() => setActive("Frontend")}
-      >
-        Frontend Dev
-      </button>
-      <button
-        className={active === "Backend" ? "btn-active" : ""}
-        onClick={() => setActive("Backend")}
-      >
-        Backend Dev
-      </button>
-      <button
-        className={active === "Text" ? "btn-active" : ""}
-        onClick={() => setActive("Text")}
-      >
-        Text
-      </button>
-      <button
-        className={active === "Contact" ? "btn-active" : ""}
-        onClick={() => setActive("Contact")}
-      >
-        Contact Us
-      </button>
+      <div className="navbar">
+        <button
+          className={active === "Home" ? "btn-active" : "navBtn"}
+          onClick={() => setActive("Home")}
+        >
+          Home
+        </button>
+        <button
+          className={active === "Frontend" ? "btn-active" : "navBtn"}
+          onClick={() => setActive("Frontend")}
+        >
+          Frontend Dev
+        </button>
+        <button
+          className={active === "Backend" ? "btn-active" : "navBtn"}
+          onClick={() => setActive("Backend")}
+        >
+          Backend Dev
+        </button>
+        <button
+          className={active === "Text" ? "btn-active" : "navBtn"}
+          onClick={() => setActive("Text")}
+        >
+          Text
+        </button>
+        <button
+          className={active === "Contact" ? "btn-active" : "navBtn"}
+          onClick={() => setActive("Contact")}
+        >
+          Contact Us
+        </button>
+      </div>
       <div className="fields">
         {active === "Home" && <Home />}
         {active === "Frontend" && <Frontend />}
@@ -49,7 +52,10 @@ export default function App() {
 function Home() {
   return (
     <div className="home-content">
-      <h1>This is Home!</h1>
+      <h1>PROGRAMMER</h1>
+      <div>
+        <h3>Hello World</h3>
+      </div>
     </div>
   );
 }
@@ -99,22 +105,21 @@ function Contact() {
   return (
     <div className="contact-content">
       <h1>Contact Us</h1>
-      <form>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" />
-        <label htmlFor="email">Email:</label>
-        {/* will update the value of email based on what they input */}
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" cols="30" rows="10"></textarea>
-        <button onClick={handleEmail()}>Contact Us</button>
-      </form>
+      <label htmlFor="name">Name:</label>
+      <input type="text" id="name" />
+      <label htmlFor="email">Email:</label>
+      {/* will update the value of email based on what they input */}
+      <input
+        type="email"
+        id="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+      <label htmlFor="message">Message:</label>
+      <textarea id="message" cols="30" rows="10"></textarea>
+      <button onClick={handleEmail}>Contact Us</button>
+
       {/* what will be shown once the email gets sent */}
       {emailSent && (
         <p>
