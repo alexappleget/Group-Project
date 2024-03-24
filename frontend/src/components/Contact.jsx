@@ -23,18 +23,24 @@ export default function Contact() {
     <div className="contact-content">
       <h1>Contact Us</h1>
       <label htmlFor="name">Name:</label>
-      <input type="text" id="name" />
+      <input type="text" id="name" placeholder="Full Name" />
       <label htmlFor="email">Email:</label>
       {/* will update the value of email based on what they input */}
       <input
         type="email"
         id="email"
+        placeholder="example@example.com"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
       />
       <label htmlFor="message">Message:</label>
-      <textarea id="message" cols="30" rows="10"></textarea>
+      <textarea
+        id="message"
+        cols="30"
+        rows="10"
+        placeholder="I really need help..."
+      ></textarea>
       <button onClick={handleEmail}>Contact Us</button>
 
       {/* what will be shown once the email gets sent */}

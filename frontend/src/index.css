@@ -149,6 +149,8 @@ body {
   border: none;
   box-shadow: 0 0 0.5rem #abdb2a;
   background-color: #323232;
+  color: #abdb2a;
+  padding-left: 15px;
 }
 
 .contact-content button {
