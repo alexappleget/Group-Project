@@ -16,22 +16,22 @@ export default function App() {
           Home
         </button>
         <button
+          className={active === "About" ? "btn-active" : "navBtn"}
+          onClick={() => setActive("About")}
+        >
+          About
+        </button>
+        <button
           className={active === "Frontend" ? "btn-active" : "navBtn"}
           onClick={() => setActive("Frontend")}
         >
-          Frontend Dev
+          Where Do I <br /> Start?
         </button>
         <button
           className={active === "Backend" ? "btn-active" : "navBtn"}
           onClick={() => setActive("Backend")}
         >
           Backend Dev
-        </button>
-        <button
-          className={active === "Text" ? "btn-active" : "navBtn"}
-          onClick={() => setActive("Text")}
-        >
-          Text
         </button>
         <button
           className={active === "Contact" ? "btn-active" : "navBtn"}
@@ -42,6 +42,7 @@ export default function App() {
       </div>
       <div className="fields">
         {active === "Home" && <Home />}
+        {active === "About" && <About />}
         {active === "Frontend" && <Frontend />}
         {active === "Backend" && <Backend />}
         {active === "Text" && <Text />}
@@ -56,8 +57,39 @@ function Home() {
     <div className="home-content">
       <h1>PROGRAMMER</h1>
       <div>
-        <h3>Hello World</h3>
+        <h3>You Are Never Alone in This Journey</h3>
       </div>
+    </div>
+  );
+}
+
+function About() {
+  return (
+    <div className="about-content">
+      <h1>About Us</h1>
+      <div></div> {/* just the green line underneath "About Us" for styling */}
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
     </div>
   );
 }
