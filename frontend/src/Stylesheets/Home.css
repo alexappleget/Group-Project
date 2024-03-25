@@ -1,0 +1,31 @@
+.home-content {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-content h1 {
+  color: white;
+  margin: 0;
+  font-size: 124px;
+}
+
+.home-content div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #abdb2a;
+  margin: 0;
+  width: 52.5%;
+  height: 40px;
+}
+
+.home-content h3 {
+  color: #121212;
+  font-family: "Open Sans";
+  font-weight: 300;
+}
