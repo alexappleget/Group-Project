@@ -1,11 +1,13 @@
 import { useState } from "react";
-import axios from "axios";
+import Contact from "./Components/Contact.jsx";
 
 export default function App() {
   const [active, setActive] = useState("Home");
 
   return (
     <div className="app">
+      <div className="circle1"></div>
+      <div className="circle2"></div>
       <div className="navbar">
         <button
           className={active === "Home" ? "btn-active" : "navBtn"}
@@ -14,22 +16,22 @@ export default function App() {
           Home
         </button>
         <button
+          className={active === "About" ? "btn-active" : "navBtn"}
+          onClick={() => setActive("About")}
+        >
+          About
+        </button>
+        <button
           className={active === "Frontend" ? "btn-active" : "navBtn"}
           onClick={() => setActive("Frontend")}
         >
-          Frontend Dev
+          Where Do I <br /> Start?
         </button>
         <button
           className={active === "Backend" ? "btn-active" : "navBtn"}
           onClick={() => setActive("Backend")}
         >
           Backend Dev
-        </button>
-        <button
-          className={active === "Text" ? "btn-active" : "navBtn"}
-          onClick={() => setActive("Text")}
-        >
-          Text
         </button>
         <button
           className={active === "Contact" ? "btn-active" : "navBtn"}
@@ -40,6 +42,7 @@ export default function App() {
       </div>
       <div className="fields">
         {active === "Home" && <Home />}
+        {active === "About" && <About />}
         {active === "Frontend" && <Frontend />}
         {active === "Backend" && <Backend />}
         {active === "Text" && <Text />}
@@ -54,8 +57,39 @@ function Home() {
     <div className="home-content">
       <h1>PROGRAMMER</h1>
       <div>
-        <h3>Hello World</h3>
+        <h3>You Are Never Alone in This Journey</h3>
       </div>
+    </div>
+  );
+}
+
+function About() {
+  return (
+    <div className="about-content">
+      <h1>About Us</h1>
+      <div></div> {/* just the green line underneath "About Us" for styling */}
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
     </div>
   );
 }
@@ -80,52 +114,6 @@ function Text() {
   return (
     <div className="text-content">
       <h1>This is Text!</h1>
-    </div>
-  );
-}
-
-function Contact() {
-  //this is grabbing the value of the user's email they input
-  const [email, setEmail] = useState("");
-  //to help confirm the user the email was sent
-  const [emailSent, setEmailSent] = useState(false);
-
-  //function that sends the email to them
-  const handleEmail = async () => {
-    try {
-      await axios.post("http://localhost:5174/contact-us", {
-        recipientEmail: email, //remember recipientEmail on the backend? the value of 'email' will be what they input and be used as 'recipientEmail' on backend and be sent to it specifically
-      });
-      setEmailSent(true); //when user clicks the button itll set 'emailSent' to true and render words
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  return (
-    <div className="contact-content">
-      <h1>Contact Us</h1>
-      <label htmlFor="name">Name:</label>
-      <input type="text" id="name" />
-      <label htmlFor="email">Email:</label>
-      {/* will update the value of email based on what they input */}
-      <input
-        type="email"
-        id="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <label htmlFor="message">Message:</label>
-      <textarea id="message" cols="30" rows="10"></textarea>
-      <button onClick={handleEmail}>Contact Us</button>
-
-      {/* what will be shown once the email gets sent */}
-      {emailSent && (
-        <p>
-          We sent you a confirmation email! Thank you for reaching out to us.
-        </p>
-      )}
     </div>
   );
 }
