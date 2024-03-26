@@ -3,10 +3,26 @@ import { useState } from "react";
 import "../Stylesheets/Contact.css";
 
 export default function Contact() {
-  //this is grabbing the value of the user's email they input
+  //this is grabbing the value of the user's email they input and is also used to get the email data
   const [email, setEmail] = useState("");
   //to help confirm the user the email was sent
   const [emailSent, setEmailSent] = useState(false);
+  //used to grab the data
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  //User Data
+  const handleUser = async () => {
+    try {
+      const body = { name, email, message };
+      const res = await axios.post("http://localhost:5175/users", body, {
+        headers: { "Content-Type": "application/json" },
+      });
+      console.log(res);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   //function that sends the email to them
   const handleEmail = async () => {
@@ -20,13 +36,25 @@ export default function Contact() {
     }
   };
 
+  //function to send email and data to database
+  const handleClick = async () => {
+    //using await because i want the data to send before moving to next function
+    await handleUser();
+    handleEmail();
+  };
+
   return (
     <div className="contact-content">
       <h1>Contact Us</h1>
       <label htmlFor="name">Name:</label>
-      <input type="text" id="name" placeholder="Full Name" />
+      <input
+        type="text"
+        id="name"
+        placeholder="Full Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
       <label htmlFor="email">Email:</label>
-      {/* will update the value of email based on what they input */}
       <input
         type="email"
         id="email"
@@ -41,8 +69,11 @@ export default function Contact() {
         cols="30"
         rows="10"
         placeholder="I really need help..."
+        maxLength="255"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
       ></textarea>
-      <button onClick={handleEmail}>Contact Us</button>
+      <button onClick={handleClick}>Contact Us</button>
 
       {/* what will be shown once the email gets sent */}
       {emailSent && (
