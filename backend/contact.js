@@ -12,11 +12,11 @@ app.use(
 );
 app.use(express.json());
 
-const { EMAIL_HOST, EMAIL_USER, EMAIL_PASS } = process.env;
+const { EMAIL_HOST, EMAIL_USER, EMAIL_PASS, EMAIL_PORT } = process.env;
 
 const transporter = nodeMailer.createTransport({
   host: EMAIL_HOST,
-  port: 465,
+  port: EMAIL_PORT,
   secure: true,
   auth: {
     user: EMAIL_USER,
@@ -42,9 +42,9 @@ app.post("/contact-us", async (req, res) => {
   //what the user will see in their inbox
   try {
     const info = await transporter.sendMail({
-      from: "Dev Team <noreplytravelprojectemail@gmail.com",
+      from: "Dev Team <noreplydeveloperemail@gmail.com",
       to: recipientEmail,
-      subjust: "Thanks for reaching out!",
+      subject: "Thanks for reaching out!",
       html: html,
     });
 
