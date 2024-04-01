@@ -2,9 +2,7 @@ const express = require("express");
 const nodeMailer = require("nodemailer");
 const cors = require("cors");
 require("dotenv").config();
-
 const app = express();
-const port = 5174; //port it'll be running on
 
 //The origin is where the website will be running. This is to basically tell the backend that it is okay to let the website interact with it.
 app.use(
@@ -14,13 +12,15 @@ app.use(
 );
 app.use(express.json());
 
+const { EMAIL_HOST, EMAIL_USER, EMAIL_PASS } = process.env;
+
 const transporter = nodeMailer.createTransport({
-  host: "smtp.gmail.com",
+  host: EMAIL_HOST,
   port: 465,
   secure: true,
   auth: {
-    user: "noreplytravelprojectemail@gmail.com",
-    pass: process.env.EMAIL_PASS,
+    user: EMAIL_USER,
+    pass: EMAIL_PASS,
   },
 });
 
@@ -57,6 +57,6 @@ app.post("/contact-us", async (req, res) => {
 });
 
 //to let us know that the backend is working and listening for a response on the frontend
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+app.listen(5174, () => {
+  console.log("Server is running on port 5174");
 });
