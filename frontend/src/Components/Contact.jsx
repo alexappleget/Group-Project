@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../Stylesheets/Contact.css";
 
 export default function Contact() {
@@ -10,6 +10,20 @@ export default function Contact() {
   //used to grab the data
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+
+  //to have the confirmation text disappear after some time
+  const [isVisible, setIsVisible] = useState(emailSent);
+
+  useEffect(() => {
+    if (emailSent) {
+      setIsVisible(true);
+      const timeout = setTimeout(() => {
+        setIsVisible(false);
+      }, 3000);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [emailSent]);
 
   //User Data
   const handleUser = async () => {
@@ -76,7 +90,7 @@ export default function Contact() {
       <button onClick={handleClick}>Contact Us</button>
 
       {/* what will be shown once the email gets sent */}
-      {emailSent && (
+      {isVisible && (
         <p>
           We sent you a confirmation email! Thank you for reaching out to us.
         </p>
