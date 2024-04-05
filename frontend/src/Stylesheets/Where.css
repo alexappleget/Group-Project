@@ -1,0 +1,56 @@
+.where-content {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+.clickExample-btn {
+  width: 150px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #abdb2a;
+  color: #121212;
+  font-size: 20px;
+  box-shadow: 0 0 0.5rem #abdb2a;
+  border: none;
+}
+
+.clickExample-btn:active {
+  border: 3px solid #abdb2a;
+  background-color: #121212;
+  color: #abdb2a;
+}
+
+.example-div {
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  height: 325px;
+  width: 500px;
+  left: 33%;
+  top: 10%;
+  background-color: #121212;
+  border: 3px solid #abdb2a;
+  border-radius: 25px;
+}
+
+.example-div button {
+  width: 150px;
+  margin-top: 75px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #abdb2a;
+  color: #121212;
+  font-size: 20px;
+  box-shadow: 0 0 0.5rem #abdb2a;
+  border: none;
+}
+
+.example-div button:active {
+  border: 3px solid #abdb2a;
+  background-color: #121212;
+  color: #abdb2a;
+}
