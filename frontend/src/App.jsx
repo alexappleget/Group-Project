@@ -2,7 +2,7 @@ import { useState } from "react";
 import Contact from "./Components/Contact.jsx";
 import Backend from "./Components/Backend.jsx";
 import Frontend from "./Components/Frontend.jsx";
-import About from "./Components/About.jsx";
+import Where from "./Components/Where.jsx";
 import Home from "./Components/Home.jsx";
 
 export default function App() {
@@ -20,33 +20,39 @@ export default function App() {
           Home
         </button>
         <button
-          className={active === "About" ? "btn-active" : "navBtn"}
-          onClick={() => setActive("About")}
+          className={active === "Where" ? "btn-active" : "navBtn"}
+          onClick={() => setActive("Where")}
         >
-          About
+          Where Do I <br /> Start?
         </button>
         <button
           className={active === "Frontend" ? "btn-active" : "navBtn"}
           onClick={() => setActive("Frontend")}
         >
-          Where Do I <br /> Start?
+          Frontend
+          <br />
+          Dev
         </button>
         <button
           className={active === "Backend" ? "btn-active" : "navBtn"}
           onClick={() => setActive("Backend")}
         >
-          Backend Dev
+          Backend
+          <br />
+          Dev
         </button>
         <button
           className={active === "Contact" ? "btn-active" : "navBtn"}
           onClick={() => setActive("Contact")}
         >
-          Contact Us
+          Contact
+          <br />
+          Us
         </button>
       </div>
       <div className="fields">
         {active === "Home" && <Home />}
-        {active === "About" && <About />}
+        {active === "Where" && <Where />}
         {active === "Frontend" && <Frontend />}
         {active === "Backend" && <Backend />}
         {active === "Contact" && <Contact />}

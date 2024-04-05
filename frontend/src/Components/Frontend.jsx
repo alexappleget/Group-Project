@@ -1,38 +1,66 @@
-import React from "react";
 import "../Stylesheets/Frontend.css";
 
 function Frontend() {
   return (
     <div className="frontend-content">
-      <h1>Start your journey from Frontend Development!</h1>
-      <div className="QandAContainer">
-        <h3>What is Frontend Development?</h3>
-        <h5>
-          Frontend development is all about creating the parts of a website that
-          users see and interact with. It's like the storefront of a web
-          business! <br /> Frontend developers use code to make websites
-          visually appealing, user-friendly, and functional on different
-          devices.
-        </h5>
-        <h3>Why Frontend Development?</h3>
-        <h5>
-          Being a frontend developer is a creative and in-demand career path.
-          <br /> You get to combine your artistic side with problem-solving
-          skills to build beautiful and interactive web experiences.
-        </h5>
-      </div>
-      <div className="gettingStarted">
-        <h3>Getting Started with Frontend Development</h3>
-        <h5>
-          The three main ingredients for frontend development are HTML, CSS, and
-          JavaScript. <br /> HTML provides the structure and content of a
-          webpage, like the foundation and walls of a house. <br /> CSS handles
-          the styling and visual design, like the paint, furniture, and overall
-          look of the house. <br /> JavaScript makes webpages interactive,
-          adding things like animations, forms, and games - like the smart
-          lights and doorbell of a house!
-        </h5>
-      </div>
+      <h1>You Chose Frontend!</h1>
+      <br />
+      <p>
+        Frontend development is a blast! It's like being an artist with a
+        computer. Instead of paint and canvas, we use code and design tools to
+        build awesome websites and apps. Every line of code feels like solving a
+        puzzle, and seeing your creations come to life on the screen is
+        incredibly rewarding. Plus, there's always something new to learn,
+        whether it's cool animations, making things load faster, or making sure
+        everything looks great on different devices. It's a perfect mix of
+        creativity and problem-solving that keeps things exciting and fun!
+      </p>
+      <br />
+      <p>
+        In order to learn frontend, you must first start by learning HTML and
+        CSS. Once you have tackled that, Javascript is your next task. Learn
+        basic HTML and CSS first before diving deeper into Javascript. When you
+        start to get into javascript, it is definitely a lot to learn and can be
+        overwhelming if you take too much on at once. Just take things one at a
+        time and don't move on until you understand everything. If you keep
+        moving on and you're still a little confused about something, it'll keep
+        piling on and get worse.
+      </p>
+      <br />
+      <p>
+        Below is a timeline for you to follow to help you on your journey to
+        becoming a developer. This timeline will include links to developer
+        roadmaps to follow, so you don't get lost. Go through the Frontend
+        Beginner Roadmap first. Learn HTML and then CSS. Once you get familiar
+        with it, move on to the javascript roadmap. The javascript roadmap is A
+        LOT to take in and can be overwhelming, but just take it one thing at a
+        time. Once you have finished the javascript roadmap, go back to the
+        frontend beginner roadmap and continue on down the path. Once you get to
+        frameworks, go ahead and start your journey learning React! Believe it
+        or not, this web app was actually built using React. React is the most
+        popular to learn and can do many things. Go ahead and get started
+        learning! If you feel lost, please go to the 'Contact Us' page and reach
+        out.
+      </p>
+      <br />
+      <ul className="frontendList">
+        <li>
+          Beginner Frontend Roadmap:
+          <a href="https://roadmap.sh/frontend?r=frontend-beginner">
+            https://roadmap.sh/frontend?r=frontend-beginner
+          </a>
+        </li>
+        <li>
+          Javascript Roadmap:
+          <a href="https://roadmap.sh/javascript">
+            https://roadmap.sh/javascript
+          </a>
+        </li>
+        <li>
+          React Roadmap:
+          <a href="https://roadmap.sh/react">https://roadmap.sh/react</a>
+        </li>
+      </ul>
     </div>
   );
 }

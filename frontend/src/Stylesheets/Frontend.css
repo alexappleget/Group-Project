@@ -1,8 +1,21 @@
 .frontend-content {
   box-sizing: border-box;
-  height: 100%;
-  width: 100%;
-  /* background-color: lightcoral; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   color: white;
-  /* font-family: "Open Sans"; */
+}
+
+.frontend-content a {
+  color: #abdb2a;
+}
+
+.frontend-content a:hover {
+  color: white;
+}
+
+.frontendList {
+  text-align: start;
 }
