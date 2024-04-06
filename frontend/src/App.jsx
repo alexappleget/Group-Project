@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Contact from "./Components/Contact.jsx";
+import FullStack from "./Components/FullStack.jsx";
 import Backend from "./Components/Backend.jsx";
 import Frontend from "./Components/Frontend.jsx";
 import Where from "./Components/Where.jsx";
@@ -42,6 +43,14 @@ export default function App() {
           Dev
         </button>
         <button
+          className={active === "FullStack" ? "btn-active" : "navBtn"}
+          onClick={() => setActive("FullStack")}
+        >
+          Full
+          <br />
+          Stack
+        </button>
+        <button
           className={active === "Contact" ? "btn-active" : "navBtn"}
           onClick={() => setActive("Contact")}
         >
@@ -55,6 +64,7 @@ export default function App() {
         {active === "Where" && <Where />}
         {active === "Frontend" && <Frontend />}
         {active === "Backend" && <Backend />}
+        {active === "FullStack" && <FullStack />}
         {active === "Contact" && <Contact />}
       </div>
     </div>

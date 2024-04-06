@@ -1,7 +1,52 @@
 .backend-content {
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    background-color: greenyellow;
-  }
-  
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.backend-content a {
+  color: #abdb2a;
+}
+
+.backend-content a:hover {
+  color: white;
+}
+
+.backendList {
+  text-align: start;
+}
+
+.backend-active {
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  height: 750px;
+  width: 750px;
+  left: 30%;
+  top: 10%;
+  background-color: #121212;
+  border: 3px solid #abdb2a;
+  border-radius: 25px;
+}
+
+.backend-content button {
+  width: 150px;
+  margin-top: 30px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #abdb2a;
+  color: #121212;
+  font-size: 20px;
+  box-shadow: 0 0 0.5rem #abdb2a;
+  border: none;
+}
+
+.backend-content button:active {
+  border: 3px solid #abdb2a;
+  background-color: #121212;
+  color: #abdb2a;
+}

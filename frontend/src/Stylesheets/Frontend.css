@@ -19,3 +19,48 @@
 .frontendList {
   text-align: start;
 }
+
+.frontend-p {
+  font-size: 24px;
+}
+
+.frontend-content button {
+  width: 150px;
+  margin-top: 30px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #abdb2a;
+  color: #121212;
+  font-size: 20px;
+  box-shadow: 0 0 0.5rem #abdb2a;
+  border: none;
+}
+
+.frontend-content button:active {
+  border: 3px solid #abdb2a;
+  background-color: #121212;
+  color: #abdb2a;
+}
+
+.frontend-active {
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  height: 750px;
+  width: 750px;
+  left: 30%;
+  top: 10%;
+  background-color: #121212;
+  border: 3px solid #abdb2a;
+  border-radius: 25px;
+}
+
+.hover-btn {
+  transition: background-color 0.3s ease;
+}
+
+.hover-btn:hover {
+  border: 3px solid #abdb2a;
+  background-color: #121212;
+  color: #abdb2a;
+}
