@@ -26,19 +26,52 @@
   color: #abdb2a;
 }
 
+.fullstackList {
+  text-align: start;
+}
+
 .fullstack-active {
   position: absolute;
   text-align: center;
   padding: 20px;
-  height: 750px;
+  height: 600px;
   width: 750px;
-  left: 30%;
+  left: 25%;
   top: 10%;
   background-color: #121212;
   border: 3px solid #abdb2a;
-  border-radius: 25px;
+  overflow-y: scroll;
 }
 
-.fullstackList {
-  text-align: start;
+.fullstack-active::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.fullstack-active::-webkit-scrollbar-track {
+  background: #acdb2a22;
+}
+
+.fullstack-active::-webkit-scrollbar-thumb {
+  background: #abdb2a;
+}
+
+.register-text {
+  color: #abdb2a;
+}
+
+.loggedIn-div {
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  height: 600px;
+  width: 750px;
+  top: 0;
+  left: 0;
+  background-color: #121212;
+  border: 3px solid #abdb2a;
+}
+
+.logout-text {
+  color: #abdb2a;
 }
