@@ -1,17 +1,9 @@
 import { useState } from "react";
 import "../Stylesheets/FullStack.css";
+import Examples from "./Examples";
 
 function FullStack() {
   const [active, setActive] = useState(false);
-  const [register, setRegister] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [loggedOut, setLoggedOut] = useState(false);
-  const [deleted, setDeleted] = useState(false);
-
-  function LoggingOut() {
-    setLoggedIn(false);
-    setLoggedOut(true);
-  }
 
   return (
     <div className="fullstack-content">
@@ -43,135 +35,7 @@ function FullStack() {
         and click the button below!
       </p>
       <button onClick={() => setActive(true)}>Click Here!</button>
-      {active && (
-        <div className="fullstack-active">
-          <h1>Excellent!</h1>
-          <p>
-            With Full Stack, I can explain the backend and be able to show you
-            how it would work on the frontend.
-          </p>
-          <br />
-          <p>
-            For starters, how you ever had an account on a website that required
-            you to log in or register an account to be able to log in?
-          </p>
-          <br />
-          <p>
-            Go ahead and pretend you are creating an account on a website. Go
-            ahead and use 'Test' for the username and then use 'Password123' for
-            the password. Then click 'Register'.
-          </p>
-          <label htmlFor="username">Username:</label>
-          <input type="text" id="username" />
-          <label htmlFor="password">Password:</label>
-          <input type="password" id="password" />
-          <button onClick={() => setRegister(true)}>Register</button>
-          <br />
-          <br />
-          {register && (
-            <>
-              <p className="register-text">
-                Great job! This message is to show you that you successfully
-                registered your account.
-              </p>
-              <br />
-              <p>
-                Now let's explain a little of what happened. When you entered
-                the username and password, then clicked 'Register', the
-                information got added into my database. Now whenever you go to
-                log in, below, the information you entered will be checked and
-                if it matches up exactly with what is in the database, then you
-                will be logged in.
-              </p>
-              <br />
-              <p>
-                Now, let's go ahead and give it a try. Now that you have a
-                username of 'test' and a password of 'password123', go ahead and
-                use that info to log in.
-              </p>
-              <label htmlFor="username">Username:</label>
-              <input type="text" id="username" />
-              <label htmlFor="password">Password:</label>
-              <input type="password" id="password" />
-              <button onClick={() => setLoggedIn(true)}>Log In</button>
-            </>
-          )}
-          {loggedIn && (
-            <div className="loggedIn-div">
-              <h1>Success!</h1>
-              <p>
-                This is to show that you are logged in. Isn't it amazing how
-                things work in programming? This is how things are done on most
-                websites.
-              </p>
-              <br />
-              <p>
-                IF and ONLY IF you are a registered user and logged in, then are
-                you able to see this log in screen. It is how websites keep
-                things secret to outside users who don't log in.
-              </p>
-              <br />
-              <p>
-                Now that we were able to see how this happens. Let's go ahead
-                and log back out and move on to the next example.
-              </p>
-              <button onClick={LoggingOut}>Log Out</button>
-            </div>
-          )}
-          {loggedOut && (
-            <>
-              <p className="logout-text">You have successfully logged out!</p>
-              <br />
-              <p>
-                Now that you have logged out, let's move on to the next example
-                below.
-              </p>
-              <br />
-              <p>
-                For this next example, we are going to delete our registered
-                account. This comes in handy when users no longer want thier
-                account and wish to remove it. Subscription emails, some places,
-                can be too much.
-              </p>
-              <br />
-              <p>
-                Let us tell the backend database to delete our account. Click
-                the button below to remove your account.
-              </p>
-              <br />
-              <button onClick={() => setDeleted(true)}>Remove Account</button>
-              <br />
-              <br />
-            </>
-          )}
-          {deleted && (
-            <>
-              <h1>Success!</h1>
-              <br />
-              <p>
-                The account was successfully removed. What basically happened
-                was that after clicking the button, the system went to the
-                database and told it to remove the data associated with the
-                account.
-              </p>
-              <br />
-              <p>
-                In case you haven't realized. This is also how companies can add
-                new employees onto their system applications. Ever went through
-                training, with a company, and recieved a login and temporary
-                password? This is the work of a secure database. The company
-                wants to keep things private, so they only allow employees with
-                created usernames to access their applications.
-              </p>
-              <br />
-              <p>
-                A company will oftentimes have a specific admin who will be able
-                to add and delete users to keep things extra safe and secure.
-              </p>
-            </>
-          )}
-        </div>
-      )}
+      {active && <Examples setActive={setActive} />}
       <br />
       <br />
       <p>
