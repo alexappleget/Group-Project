@@ -1,0 +1,11 @@
+.loggedIn-div {
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  height: 600px;
+  width: 750px;
+  top: 0;
+  left: 0;
+  background-color: #121212;
+  border: 3px solid #abdb2a;
+}
