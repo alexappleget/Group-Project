@@ -4,12 +4,40 @@ import Login from "./Login";
 import Logout from "./Logout";
 import Deleted from "./Deleted";
 import "../Stylesheets/Examples.css";
+import axios from "axios";
 
 function Examples({ setActive }) {
   const [register, setRegister] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   const [loggedOut, setLoggedOut] = useState(false);
   const [deleted, setDeleted] = useState(false);
+
+  //used for the PostgreSQL to acquire the data
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  //to be drilled into different components
+  const [errorMessage, setErrorMessage] = useState("");
+
+  //function to send the inputed text to the database
+  const handleRegister = async () => {
+    try {
+      const body = { username, password };
+      const res = await axios.post("http://localhost:5175/testregister", body, {
+        headers: { "Content-Type": "application/json" },
+      });
+      console.log(res);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  //function to combine handleRegister and to setRegister to true
+  const handleClick = async () => {
+    //i am using await because i want the data to be sent to the database before executing next function
+    await handleRegister();
+    setRegister(true);
+  };
 
   return (
     <div className="fullstack-active">
@@ -30,15 +58,36 @@ function Examples({ setActive }) {
         password. Then click 'Register'.
       </p>
       <label htmlFor="username">Username:</label>
-      <input type="text" id="username" />
+      <input
+        type="text"
+        id="username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
       <label htmlFor="password">Password:</label>
-      <input type="password" id="password" />
-      <button onClick={() => setRegister(true)}>Register</button>
+      <input
+        type="password"
+        id="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      {/* button for testdata sql for registering */}
+      <button onClick={handleClick}>Register</button>
       <br />
       <br />
-      {register && <Register setLoggedIn={setLoggedIn} />}
+      {register && (
+        <Register
+          setLoggedIn={setLoggedIn}
+          errorMessage={errorMessage}
+          setErrorMessage={setErrorMessage}
+        />
+      )}
       {loggedIn && (
-        <Login setLoggedIn={setLoggedIn} setLoggedOut={setLoggedOut} />
+        <Login
+          setLoggedIn={setLoggedIn}
+          setLoggedOut={setLoggedOut}
+          setErrorMessage={setErrorMessage}
+        />
       )}
       {loggedOut && <Logout setDeleted={setDeleted} />}
       {deleted && <Deleted />}
