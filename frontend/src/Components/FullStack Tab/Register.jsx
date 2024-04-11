@@ -10,7 +10,7 @@ function Register({ setLoggedIn, errorMessage, setErrorMessage }) {
     try {
       const body = { username, password };
       const res = await axios.post(
-        "https://alexappleget.github.io/login",
+        "https://alexappleget.github.io/Group-Project/login",
         body,
         {
           headers: { "Content-Type": "application/json" },

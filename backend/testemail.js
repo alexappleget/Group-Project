@@ -6,7 +6,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://alexappleget.github.io",
+    origin: "https://alexappleget.github.io/Group-Project",
   })
 );
 app.use(express.json());

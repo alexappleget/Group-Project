@@ -9,9 +9,12 @@ function Where() {
 
   const sendEmail = async () => {
     try {
-      await axios.post("https://alexappleget.github.io/test-email", {
-        recipientEmail: email,
-      });
+      await axios.post(
+        "https://alexappleget.github.io/Group-Project/test-email",
+        {
+          recipientEmail: email,
+        }
+      );
     } catch (err) {
       console.error(err);
     }

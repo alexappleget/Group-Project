@@ -24,7 +24,7 @@ function Examples({ setActive }) {
     try {
       const body = { username, password };
       const res = await axios.post(
-        "https://alexappleget.github.io/testregister",
+        "https://alexappleget.github.io/Group-Project/testregister",
         body,
         {
           headers: { "Content-Type": "application/json" },
