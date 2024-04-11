@@ -9,9 +9,13 @@ function Register({ setLoggedIn, errorMessage, setErrorMessage }) {
   const handleLogin = async () => {
     try {
       const body = { username, password };
-      const res = await axios.post("http://localhost:5175/login", body, {
-        headers: { "Content-Type": "application/json" },
-      });
+      const res = await axios.post(
+        "https://alexappleget.github.io/login",
+        body,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
       console.log(res.data);
       setLoggedIn(true);
     } catch (err) {
