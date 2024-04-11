@@ -5,9 +5,8 @@ import axios from "axios";
 function Where() {
   const [clicked, setClicked] = useState(false);
   const [email, setEmail] = useState("");
-  const [emailSent, setEmailSent] = useState(false);
 
-  const sendEmail = async () => {
+  const handleEmail = async () => {
     try {
       await axios.post(
         "https://alexappleget.github.io/Group-Project/test-email",
@@ -18,11 +17,6 @@ function Where() {
     } catch (err) {
       console.error(err);
     }
-  };
-
-  const handleEmail = async () => {
-    await sendEmail();
-    setEmailSent(true);
   };
 
   return (
@@ -71,7 +65,6 @@ function Where() {
           "behind the scenes".
         </p>
       </div>
-      <br />
       <div className="whereFullStack-content">
         <h3>Full Stack</h3>
         <p>
@@ -83,8 +76,6 @@ function Where() {
           click that will send the email. Go ahead and give it a try! Input your
           email and click send!
         </p>
-        <br />
-        <br />
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -94,11 +85,6 @@ function Where() {
           required
         />
         <button onClick={handleEmail}>Send Email</button>
-        <br />
-        <br />
-        {emailSent && (
-          <p style={{ color: "#abdb2a" }}>Email Successfully Sent!</p>
-        )}
       </div>
     </div>
   );

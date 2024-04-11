@@ -14,15 +14,17 @@
   },
   "dependencies": {
     "axios": "^1.6.8",
+<<<<<<< HEAD:package.json
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "nodemailer": "^6.9.13",
     "pg": "^8.11.5",
     "postgres": "^3.4.4",
+=======
+>>>>>>> parent of 5d32e9d (polished and finalized project):frontend/package.json
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "vite-plugin-env-compatible": "^2.0.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",

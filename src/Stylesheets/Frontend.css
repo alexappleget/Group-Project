@@ -52,20 +52,7 @@
   top: 10%;
   background-color: #121212;
   border: 3px solid #abdb2a;
-  overflow-y: scroll;
-}
-
-.frontend-active::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-.frontend-active::-webkit-scrollbar-track {
-  background: #acdb2a22;
-}
-
-.frontend-active::-webkit-scrollbar-thumb {
-  background: #abdb2a;
+  border-radius: 25px;
 }
 
 .hover-btn {
