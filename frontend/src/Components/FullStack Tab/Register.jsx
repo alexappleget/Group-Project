@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../Stylesheets/Register.css";
+import "../../Stylesheets/Register.css";
 import axios from "axios";
 
 function Register({ setLoggedIn, errorMessage, setErrorMessage }) {

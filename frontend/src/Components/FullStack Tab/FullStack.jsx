@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../Stylesheets/FullStack.css";
+import "../../Stylesheets/FullStack.css";
 import Examples from "./Examples";
 
 function FullStack() {

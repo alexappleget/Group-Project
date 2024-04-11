@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "../Stylesheets/Frontend.css";
+import "../../Stylesheets/Frontend.css";
+import FrontendExamples from "./FrontendExamples";
 
 function Frontend() {
   const [active, setActive] = useState(false);
@@ -70,20 +71,7 @@ function Frontend() {
         button below!
       </p>
       <button onClick={() => setActive(true)}>Click Here!</button>
-      {active && (
-        <div className="frontend-active">
-          <h1>Excellent!</h1>
-          <p>
-            Remember that first example button that popped up a screen like this
-            one? Well you can do more with buttons. You can add cool effects to
-            them as well. Check out these 3 buttons below to see other hover
-            effects. Hover your mouse over them!
-          </p>
-          <button className="hover-btn">Hover Me</button>
-          <button className="liquid-btn">Hover Me</button>
-          <button className="frontend-btn3">Hover Me</button>
-        </div>
-      )}
+      {active && <FrontendExamples setActive={setActive} />}
     </div>
   );
 }

@@ -3,7 +3,7 @@ import Register from "./Register";
 import Login from "./Login";
 import Logout from "./Logout";
 import Deleted from "./Deleted";
-import "../Stylesheets/Examples.css";
+import "../../Stylesheets/Examples.css";
 import axios from "axios";
 
 function Examples({ setActive }) {
@@ -91,6 +91,8 @@ function Examples({ setActive }) {
       )}
       {loggedOut && <Logout setDeleted={setDeleted} />}
       {deleted && <Deleted />}
+      <br />
+      <button onClick={() => setActive(false)}>Close</button>
     </div>
   );
 }

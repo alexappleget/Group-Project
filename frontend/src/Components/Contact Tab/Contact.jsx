@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import "../Stylesheets/Contact.css";
+import "../../Stylesheets/Contact.css";
 
 export default function Contact() {
   //this is grabbing the value of the user's email they input and is also used to get the email data

@@ -1,4 +1,4 @@
-import "../Stylesheets/Logout.css";
+import "../../Stylesheets/Logout.css";
 import axios from "axios";
 
 function Logout({ setDeleted }) {

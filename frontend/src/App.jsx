@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Contact from "./Components/Contact.jsx";
-import FullStack from "./Components/FullStack.jsx";
-import Backend from "./Components/Backend.jsx";
-import Frontend from "./Components/Frontend.jsx";
+import Contact from "./Components/Contact Tab/Contact.jsx";
+import FullStack from "./Components/FullStack Tab/FullStack.jsx";
+import Backend from "./Components/Backend Tab/Backend.jsx";
+import Frontend from "./Components/Frontend Tab/Frontend.jsx";
 import Where from "./Components/Where.jsx";
 import Home from "./Components/Home.jsx";
 
