@@ -1,7 +1,11 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import babel from "@rollup/plugin-babel";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [
+    babel({
+      babelHelpers: "bundled",
+      exclude: "node_modules/**", // exclude node_modules
+    }),
+  ],
+});
