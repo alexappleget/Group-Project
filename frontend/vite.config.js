@@ -4,13 +4,9 @@ import { manifest } from "vite-plugin-manifest";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    manifest({
-      content: {
-        start_url: "index.html",
-        display: "standalone",
-      },
-    }),
-  ],
+  plugins: [react()],
+  root: "./src",
+  build: {
+    outDir: "./public",
+  },
 });
