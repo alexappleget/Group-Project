@@ -24,7 +24,7 @@ function Examples({ setActive }) {
     try {
       const body = { username, password };
       const res = await axios.post(
-        `${import.meta.API_BASE_URL}/testregister`,
+        `${import.meta.VITE_API_BASE_URL}/testregister`,
         body,
         {
           headers: { "Content-Type": "application/json" },

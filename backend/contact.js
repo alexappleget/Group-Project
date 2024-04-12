@@ -4,13 +4,13 @@ const cors = require("cors");
 require("dotenv").config();
 const app = express();
 
-const { EMAIL_HOST, EMAIL_USER, EMAIL_PASS, EMAIL_PORT, API_BASE_URL } =
+const { EMAIL_HOST, EMAIL_USER, EMAIL_PASS, EMAIL_PORT, VITE_API_BASE_URL } =
   process.env;
 
 //The origin is where the website will be running. This is to basically tell the backend that it is okay to let the website interact with it.
 app.use(
   cors({
-    origin: API_BASE_URL,
+    origin: VITE_API_BASE_URL,
   })
 );
 app.use(express.json());

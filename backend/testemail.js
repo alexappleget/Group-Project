@@ -6,7 +6,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: import.meta.API_BASE_URL,
+    origin: import.meta.VITE_API_BASE_URL,
   })
 );
 app.use(express.json());
