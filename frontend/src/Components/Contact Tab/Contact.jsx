@@ -29,9 +29,13 @@ export default function Contact() {
   const handleUser = async () => {
     try {
       const body = { name, email, message };
-      const res = await axios.post("http://localhost:5175/users", body, {
-        headers: { "Content-Type": "application/json" },
-      });
+      const res = await axios.post(
+        "https://group-project-dun.vercel.app/users",
+        body,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
       console.log(res);
     } catch (err) {
       console.error(err);
@@ -41,7 +45,7 @@ export default function Contact() {
   //function that sends the email to them
   const handleEmail = async () => {
     try {
-      await axios.post("http://localhost:5174/contact-us", {
+      await axios.post("https://group-project-dun.vercel.app/contact-us", {
         recipientEmail: email, //remember recipientEmail on the backend? the value of 'email' will be what they input and be used as 'recipientEmail' on backend and be sent to it specifically
       });
       setEmailSent(true); //when user clicks the button itll set 'emailSent' to true and render words

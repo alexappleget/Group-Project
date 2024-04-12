@@ -5,7 +5,9 @@ function Logout({ setDeleted }) {
   //function to delete the user data from the database. It'll delete ALL the data, but I don't care because these are just test users. I want to delete ALL so my database doesn't get too flooded with people trying out the example
   const deleteUser = async () => {
     try {
-      const res = await axios.post("http://localhost:5175/delete");
+      const res = await axios.post(
+        "https://group-project-dun.vercel.app/delete"
+      );
       console.log(res);
     } catch (err) {
       console.error(err);

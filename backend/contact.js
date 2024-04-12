@@ -7,7 +7,7 @@ const app = express();
 //The origin is where the website will be running. This is to basically tell the backend that it is okay to let the website interact with it.
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://group-project-dun.vercel.app",
   })
 );
 app.use(express.json());
