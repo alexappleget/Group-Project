@@ -5,7 +5,7 @@ import { manifest } from "vite-plugin-manifest";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  root: "./src",
+  root: "./src/main.jsx",
   build: {
     outDir: "./public",
   },
