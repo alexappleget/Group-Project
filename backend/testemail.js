@@ -6,7 +6,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://group-project-dun.vercel.app",
+    origin: import.meta.API_BASE_URL,
   })
 );
 app.use(express.json());

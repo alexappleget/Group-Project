@@ -9,13 +9,9 @@ function Register({ setLoggedIn, errorMessage, setErrorMessage }) {
   const handleLogin = async () => {
     try {
       const body = { username, password };
-      const res = await axios.post(
-        "https://group-project-dun.vercel.app/login",
-        body,
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      );
+      const res = await axios.post(`${import.meta.API_BASE_URL}/login`, body, {
+        headers: { "Content-Type": "application/json" },
+      });
       console.log(res.data);
       setLoggedIn(true);
     } catch (err) {

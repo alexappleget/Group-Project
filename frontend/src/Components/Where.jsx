@@ -9,7 +9,7 @@ function Where() {
 
   const sendEmail = async () => {
     try {
-      await axios.post("https://group-project-dun.vercel.app/test-email", {
+      await axios.post(`${import.meta.API_BASE_URL}/test-email`, {
         recipientEmail: email,
       });
     } catch (err) {
