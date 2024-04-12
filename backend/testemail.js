@@ -11,15 +11,13 @@ app.use(
 );
 app.use(express.json());
 
-const { EMAIL_HOST, EMAIL_USER, EMAIL_PASS, EMAIL_PORT } = process.env;
-
 const transporter = nodeMailer.createTransport({
-  host: EMAIL_HOST,
-  port: EMAIL_PORT,
+  host: import.meta.EMAIL_HOST,
+  port: import.meta.EMAIL_PORT,
   secure: true,
   auth: {
-    user: EMAIL_USER,
-    pass: EMAIL_PASS,
+    user: import.meta.EMAIL_USER,
+    pass: import.meta.EMAIL_PASS,
   },
 });
 

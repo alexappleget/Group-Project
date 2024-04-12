@@ -2,17 +2,12 @@ const { Pool } = require("pg");
 require("dotenv").config();
 
 function createPool() {
-  const { SQL_USER, SQL_PASS, SQL_HOST, SQL_PORT, SQL_DATABASE } = process.env;
-  if (!SQL_USER || !SQL_PASS || !SQL_HOST || !SQL_PORT || !SQL_DATABASE) {
-    throw new Error("Incomplete database configuration.");
-  }
-
   const pool = new Pool({
-    user: SQL_USER,
-    password: SQL_PASS,
-    host: SQL_HOST,
-    port: SQL_PORT,
-    database: SQL_DATABASE,
+    user: import.meta.SQL_USER,
+    password: import.meta.SQL_PASS,
+    host: import.meta.SQL_HOST,
+    port: import.meta.SQL_PORT,
+    database: import.meta.SQL_DATABASE,
   });
 
   //to test the connection to the database

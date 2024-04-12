@@ -4,24 +4,21 @@ const cors = require("cors");
 require("dotenv").config();
 const app = express();
 
-const { EMAIL_HOST, EMAIL_USER, EMAIL_PASS, EMAIL_PORT, VITE_API_BASE_URL } =
-  process.env;
-
 //The origin is where the website will be running. This is to basically tell the backend that it is okay to let the website interact with it.
 app.use(
   cors({
-    origin: VITE_API_BASE_URL,
+    origin: import.meta.VITE_API_BASE_URL,
   })
 );
 app.use(express.json());
 
 const transporter = nodeMailer.createTransport({
-  host: EMAIL_HOST,
-  port: EMAIL_PORT,
+  host: import.meta.EMAIL_HOST,
+  port: import.meta.EMAIL_PORT,
   secure: true,
   auth: {
-    user: EMAIL_USER,
-    pass: EMAIL_PASS,
+    user: import.meta.EMAIL_USER,
+    pass: import.meta.EMAIL_PASS,
   },
 });
 
