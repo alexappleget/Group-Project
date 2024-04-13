@@ -92,23 +92,15 @@ app.post("/test-email", async (req, res) => {
 
 // To connect our database
 
-const { SQL_USER, SQL_PASS, SQL_HOST, SQL_PORT, SQL_DATABASE, BACKEND_URL } =
-  process.env;
-if (
-  !SQL_USER ||
-  !SQL_PASS ||
-  !SQL_HOST ||
-  !SQL_PORT ||
-  !SQL_DATABASE ||
-  !BACKEND_URL
-) {
+const { SQL_USER, SQL_PASS, SQL_HOST, SQL_PORT, SQL_DATABASE } = process.env;
+if (!SQL_USER || !SQL_PASS || !SQL_HOST || !SQL_PORT || !SQL_DATABASE) {
   throw new Error("Incomplete database configuration.");
 }
 
 const pool = new Pool({
   user: SQL_USER,
   password: SQL_PASS,
-  host: BACKEND_URL,
+  host: SQL_HOST,
   port: SQL_PORT,
   database: SQL_DATABASE,
 });
