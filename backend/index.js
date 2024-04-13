@@ -106,6 +106,9 @@ function createPool() {
     host: SQL_HOST,
     port: SQL_PORT,
     database: SQL_DATABASE,
+    ssl: {
+      require: true,
+    },
   });
 
   //to test the connection to the database
