@@ -24,7 +24,7 @@ function Examples({ setActive }) {
     try {
       const body = { username, password };
       const res = await axios.post(
-        `${import.meta.env.BACKEND_URL}/testregister`,
+        `${import.meta.env.FRONTEND_URL}/testregister`,
         body,
         {
           headers: { "Content-Type": "application/json" },

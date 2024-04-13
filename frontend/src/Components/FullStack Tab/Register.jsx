@@ -10,7 +10,7 @@ function Register({ setLoggedIn, errorMessage, setErrorMessage }) {
     try {
       const body = { username, password };
       const res = await axios.post(
-        `${import.meta.env.BACKEND_URL}/login`,
+        `${import.meta.env.FRONTEND_URL}/login`,
         body,
         {
           headers: { "Content-Type": "application/json" },
