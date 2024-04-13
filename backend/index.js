@@ -5,9 +5,11 @@ require("dotenv").config();
 const app = express();
 const { Pool } = require("pg");
 
+const { FRONTEND_URL } = process.env;
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: FRONTEND_URL,
   })
 );
 app.use(express.json());
@@ -182,8 +184,4 @@ app.post("/delete", async (req, res) => {
   } catch (err) {
     console.error(err);
   }
-});
-
-app.listen(5174, () => {
-  console.log("Server has started on port 5174");
 });

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "../../Stylesheets/Contact.css";
+require("dotenv").config();
 
 export default function Contact() {
   //this is grabbing the value of the user's email they input and is also used to get the email data
@@ -13,6 +14,9 @@ export default function Contact() {
 
   //to have the confirmation text disappear after some time
   const [isVisible, setIsVisible] = useState(emailSent);
+
+  // env variables
+  const { BACKEND_URL } = process.env;
 
   useEffect(() => {
     if (emailSent) {
@@ -29,7 +33,7 @@ export default function Contact() {
   const handleUser = async () => {
     try {
       const body = { name, email, message };
-      const res = await axios.post("http://localhost:5174/users", body, {
+      const res = await axios.post(`${BACKEND_URL}/users`, body, {
         headers: { "Content-Type": "application/json" },
       });
       console.log(res);
@@ -41,7 +45,7 @@ export default function Contact() {
   //function that sends the email to them
   const handleEmail = async () => {
     try {
-      await axios.post("http://localhost:5174/contact-us", {
+      await axios.post(`${BACKEND_URL}/contact-us`, {
         recipientEmail: email, //remember recipientEmail on the backend? the value of 'email' will be what they input and be used as 'recipientEmail' on backend and be sent to it specifically
       });
       setEmailSent(true); //when user clicks the button itll set 'emailSent' to true and render words
