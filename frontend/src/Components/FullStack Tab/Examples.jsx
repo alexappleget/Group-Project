@@ -5,7 +5,6 @@ import Logout from "./Logout";
 import Deleted from "./Deleted";
 import "../../Stylesheets/Examples.css";
 import axios from "axios";
-require("dotenv").config();
 
 function Examples({ setActive }) {
   const [register, setRegister] = useState(false);
@@ -20,15 +19,17 @@ function Examples({ setActive }) {
   //to be drilled into different components
   const [errorMessage, setErrorMessage] = useState("");
 
-  const { BACKEND_URL } = process.env;
-
   //function to send the inputed text to the database
   const handleRegister = async () => {
     try {
       const body = { username, password };
-      const res = await axios.post(`${BACKEND_URL}/testregister`, body, {
-        headers: { "Content-Type": "application/json" },
-      });
+      const res = await axios.post(
+        `${import.meta.env.BACKEND_URL}/testregister`,
+        body,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
       console.log(res);
     } catch (err) {
       console.error(err);

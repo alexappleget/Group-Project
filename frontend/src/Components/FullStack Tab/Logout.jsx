@@ -1,13 +1,11 @@
 import "../../Stylesheets/Logout.css";
 import axios from "axios";
-require("dotenv").config();
 
 function Logout({ setDeleted }) {
-  const { BACKEND_URL } = process.env;
   //function to delete the user data from the database. It'll delete ALL the data, but I don't care because these are just test users. I want to delete ALL so my database doesn't get too flooded with people trying out the example
   const deleteUser = async () => {
     try {
-      const res = await axios.post(`${BACKEND_URL}/delete`);
+      const res = await axios.post(`${import.meta.env.BACKEND_URL}/delete`);
       console.log(res);
     } catch (err) {
       console.error(err);

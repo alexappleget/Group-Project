@@ -1,20 +1,21 @@
 import { useState } from "react";
 import "../../Stylesheets/Register.css";
 import axios from "axios";
-require("dotenv").config();
 
 function Register({ setLoggedIn, errorMessage, setErrorMessage }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const { BACKEND_URL } = process.env;
-
   const handleLogin = async () => {
     try {
       const body = { username, password };
-      const res = await axios.post(`${BACKEND_URL}/login`, body, {
-        headers: { "Content-Type": "application/json" },
-      });
+      const res = await axios.post(
+        `${import.meta.env.BACKEND_URL}/login`,
+        body,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
       console.log(res.data);
       setLoggedIn(true);
     } catch (err) {

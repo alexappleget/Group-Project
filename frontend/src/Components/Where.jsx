@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import "../Stylesheets/Where.css";
 import axios from "axios";
-require("dotenv").config();
 
 function Where() {
   const [clicked, setClicked] = useState(false);
   const [email, setEmail] = useState("");
   const [emailSent, setEmailSent] = useState(false);
 
-  const { BACKEND_URL } = process.env;
-
   const sendEmail = async () => {
     try {
-      await axios.post(`${BACKEND_URL}/test-email`, {
+      await axios.post(`${import.meta.env.BACKEND_URL}/test-email`, {
         recipientEmail: email,
       });
     } catch (err) {
