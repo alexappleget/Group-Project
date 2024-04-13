@@ -117,8 +117,6 @@ pool.query("SELECT NOW()", (err, res) => {
   }
 });
 
-module.exports = pool;
-
 // Code that will take whatever a user inputs into the contact form, and send it to our database to look at
 app.post("/users", async (req, res) => {
   try {
