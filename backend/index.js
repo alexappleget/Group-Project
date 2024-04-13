@@ -5,6 +5,8 @@ require("dotenv").config();
 const app = express();
 const { Pool } = require("pg");
 
+const pool = CreatePool();
+
 const { FRONTEND_URL } = process.env;
 
 app.use(
@@ -45,7 +47,7 @@ app.post("/contact-us", async (req, res) => {
   // What the user will see in their inbox
   try {
     const info = await transporter.sendMail({
-      from: "Dev Team <noreplytravelprojectemail@gmail.com",
+      from: "Dev Team <noreplytravelprojectemail@gmail.com>",
       to: recipientEmail,
       subject: "Thanks for reaching out!",
       html: html,
@@ -117,7 +119,7 @@ function createPool() {
 
   return pool;
 }
-module.exports = createPool();
+module.exports = createPool;
 
 // Code that will take whatever a user inputs into the contact form, and send it to our database to look at
 app.post("/users", async (req, res) => {
