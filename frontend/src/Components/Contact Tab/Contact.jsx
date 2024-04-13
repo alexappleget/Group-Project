@@ -30,7 +30,7 @@ export default function Contact() {
     try {
       const body = { name, email, message };
       const res = await axios.post(
-        `${import.meta.env.FRONTEND_URL}/users`,
+        `${import.meta.env.BACKEND_URL}/users`,
         body,
         {
           headers: { "Content-Type": "application/json" },
@@ -45,7 +45,7 @@ export default function Contact() {
   //function that sends the email to them
   const handleEmail = async () => {
     try {
-      await axios.post(`${import.meta.env.FRONTEND_URL}/contact-us`, {
+      await axios.post(`${import.meta.env.BACKEND_URL}/contact-us`, {
         recipientEmail: email, //remember recipientEmail on the backend? the value of 'email' will be what they input and be used as 'recipientEmail' on backend and be sent to it specifically
       });
       setEmailSent(true); //when user clicks the button itll set 'emailSent' to true and render words

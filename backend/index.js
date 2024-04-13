@@ -103,6 +103,9 @@ const pool = new Pool({
   host: SQL_HOST,
   port: SQL_PORT,
   database: SQL_DATABASE,
+  ssl: {
+    require: true,
+  },
 });
 
 // To test the connection to the database

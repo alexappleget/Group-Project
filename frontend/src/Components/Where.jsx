@@ -9,7 +9,7 @@ function Where() {
 
   const sendEmail = async () => {
     try {
-      await axios.post(`${import.meta.env.FRONTEND_URL}/test-email`, {
+      await axios.post(`${import.meta.env.BACKEND_URL}/test-email`, {
         recipientEmail: email,
       });
     } catch (err) {
