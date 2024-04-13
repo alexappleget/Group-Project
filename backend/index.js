@@ -185,3 +185,7 @@ app.post("/delete", async (req, res) => {
     console.error(err);
   }
 });
+
+app.listen(5175, () => {
+  console.log("Server is running on port 5175");
+});
