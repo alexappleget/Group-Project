@@ -5,7 +5,7 @@ require("dotenv").config();
 const app = express();
 const { Pool } = require("pg");
 
-const pool = CreatePool();
+const pool = createPool();
 
 const { FRONTEND_URL } = process.env;
 
