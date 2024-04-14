@@ -19,7 +19,7 @@ const { EMAIL_HOST, EMAIL_USER, EMAIL_PASS, EMAIL_PORT } = process.env;
 const transporter = nodeMailer.createTransport({
   host: EMAIL_HOST,
   port: EMAIL_PORT,
-  secure: true,
+  secure: false,
   auth: {
     user: EMAIL_USER,
     pass: EMAIL_PASS,
@@ -194,7 +194,6 @@ function createPool() {
 
   return pool;
 }
-module.exports = createPool;
 
 app.listen(5175, () => {
   console.log("Server is running on port 5175");
