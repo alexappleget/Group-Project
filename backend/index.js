@@ -4,8 +4,14 @@ const cors = require("cors");
 const { Pool } = require("pg");
 require("dotenv").config();
 
+const { VERCEL_FRONTEND_URL } = process.env;
+
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: VERCEL_FRONTEND_URL,
+  })
+);
 app.use(express.json());
 
 // Database connection setup
