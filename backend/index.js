@@ -177,6 +177,6 @@ app.post("/test-email", async (req, res) => {
   }
 });
 
-app.listen(5174, () => {
-  console.log("Server is running on port 5174");
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
