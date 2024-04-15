@@ -29,7 +29,7 @@ export default function Contact() {
   const handleUser = async () => {
     try {
       const body = { name, email, message };
-      const res = await axios.post("http://localhost:5174/users", body, {
+      const res = await axios.post(`${import.meta.env.BASE_URL}/users`, body, {
         headers: { "Content-Type": "application/json" },
       });
       console.log(res);
@@ -41,7 +41,7 @@ export default function Contact() {
   //function that sends the email to them
   const handleEmail = async () => {
     try {
-      await axios.post("http://localhost:5174/contact-us", {
+      await axios.post(`${import.meta.env.BASE_URL}/contact-us`, {
         recipientEmail: email, //remember recipientEmail on the backend? the value of 'email' will be what they input and be used as 'recipientEmail' on backend and be sent to it specifically
       });
       setEmailSent(true); //when user clicks the button itll set 'emailSent' to true and render words
