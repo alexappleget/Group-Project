@@ -5,7 +5,11 @@ const { Pool } = require("pg");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://dev-help-theta.vercel.app/",
+  })
+);
 app.use(express.json());
 
 // Database connection setup
