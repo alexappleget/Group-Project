@@ -23,7 +23,7 @@ function Examples({ setActive }) {
   const handleRegister = async () => {
     try {
       const body = { username, password };
-      const res = await axios.post("http://localhost:5175/testregister", body, {
+      const res = await axios.post("http://localhost:5174/testregister", body, {
         headers: { "Content-Type": "application/json" },
       });
       console.log(res);

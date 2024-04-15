@@ -9,7 +9,7 @@ function Register({ setLoggedIn, errorMessage, setErrorMessage }) {
   const handleLogin = async () => {
     try {
       const body = { username, password };
-      const res = await axios.post("http://localhost:5175/login", body, {
+      const res = await axios.post("http://localhost:5174/login", body, {
         headers: { "Content-Type": "application/json" },
       });
       console.log(res.data);

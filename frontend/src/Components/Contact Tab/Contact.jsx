@@ -29,7 +29,7 @@ export default function Contact() {
   const handleUser = async () => {
     try {
       const body = { name, email, message };
-      const res = await axios.post("http://localhost:5175/users", body, {
+      const res = await axios.post("http://localhost:5174/users", body, {
         headers: { "Content-Type": "application/json" },
       });
       console.log(res);
