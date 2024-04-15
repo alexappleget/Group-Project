@@ -24,7 +24,7 @@ function Examples({ setActive }) {
     try {
       const body = { username, password };
       const res = await axios.post(
-        `${import.meta.env.VERCEL_BACKEND_URL}/testregister`,
+        `${import.meta.env.BACKEND_URL}/testregister`,
         body,
         {
           headers: { "Content-Type": "application/json" },
