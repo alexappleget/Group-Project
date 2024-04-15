@@ -9,9 +9,15 @@ function Where() {
 
   const sendEmail = async () => {
     try {
-      await axios.post(`${import.meta.env.BASE_URL}/test-email`, {
-        recipientEmail: email,
-      });
+      await axios.post(
+        `${import.meta.env.BASE_URL}/test-email`,
+        {
+          recipientEmail: email,
+        },
+        {
+          timeout: 99999,
+        }
+      );
     } catch (err) {
       console.error(err);
     }
