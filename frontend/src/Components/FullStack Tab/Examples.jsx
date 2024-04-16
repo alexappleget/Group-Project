@@ -23,9 +23,13 @@ function Examples({ setActive }) {
   const handleRegister = async () => {
     try {
       const body = { username, password };
-      const res = await axios.post("http://localhost:5174/testregister", body, {
-        headers: { "Content-Type": "application/json" },
-      });
+      const res = await axios.post(
+        "https://group-project-2rxv.onrender.com/testregister",
+        body,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
       console.log(res);
     } catch (err) {
       console.error(err);
