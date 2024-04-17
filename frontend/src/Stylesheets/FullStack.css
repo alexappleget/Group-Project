@@ -29,3 +29,12 @@
 .fullstackList {
   text-align: start;
 }
+
+.fullstack-content a {
+  color: #abdb2a;
+  margin-left: 10px;
+}
+
+.fullstack-content a:hover {
+  color: white;
+}

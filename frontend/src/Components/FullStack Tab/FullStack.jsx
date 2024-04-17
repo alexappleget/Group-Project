@@ -53,14 +53,22 @@ function FullStack() {
       <p>1. Start off by learning Frontend. Learn HTML and CSS first.</p>
       <br />
       <br />
-      <p>2. Move on to learn Javascript fundamentals here: (link)</p>
+      <p>
+        2. Move on to learn Javascript fundamentals here:
+        <a href="https://roadmap.sh/javascript" target="_blank">
+          https://roadmap.sh/javascript
+        </a>
+      </p>
       <br />
       <br />
       <p>
         3. Once you have gone through the JS roadmap. Go through this React
         roadmap
         <br />
-        to learn the React frontend framework: (link)
+        to learn the React frontend framework:
+        <a href="https://roadmap.sh/react" target="_blank">
+          https://roadmap.sh/react
+        </a>
       </p>
       <br />
       <br />
@@ -86,7 +94,10 @@ function FullStack() {
         databases. I recommend learning PostgreSQL as it works
         <br />
         well with React and is one of the most popular databases. Check out this
-        youtube video to get started: (link)
+        youtube video to get started:
+        <a href="https://www.youtube.com/watch?v=ldYcgPKEZC8" target="_blank">
+          https://www.youtube.com/watch?v=ldYcgPKEZC8
+        </a>
       </p>
     </div>
   );
