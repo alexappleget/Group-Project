@@ -11,6 +11,30 @@
   overflow-y: scroll;
 }
 
+.fullstack-active label,
+.fullstack-active input {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  margin-top: 10px;
+}
+
+.fullstack-active label {
+  color: #abdb2a;
+  font-size: 24px;
+  width: 300px;
+}
+
+.fullstack-active input {
+  width: 300px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 0 0.5rem #abdb2a;
+  background-color: #323232;
+  color: #abdb2a;
+  padding: 0 15px;
+}
+
 .fullstack-active::-webkit-scrollbar {
   width: 10px;
   height: 10px;

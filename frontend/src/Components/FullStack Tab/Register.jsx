@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../../Stylesheets/Register.css";
 import axios from "axios";
 
-function Register({ setLoggedIn, errorMessage, setErrorMessage }) {
+function Register({ setLoggedIn, errorMessage, setErrorMessage, setActive }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,6 +18,7 @@ function Register({ setLoggedIn, errorMessage, setErrorMessage }) {
       );
       console.log(res.data);
       setLoggedIn(true);
+      setActive(false);
     } catch (err) {
       console.error("Login error:", err);
       setErrorMessage("Invalid username or password");

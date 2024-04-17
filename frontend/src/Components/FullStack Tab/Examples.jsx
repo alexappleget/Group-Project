@@ -1,15 +1,12 @@
 import { useState } from "react";
 import Register from "./Register";
-import Login from "./Login";
 import Logout from "./Logout";
 import Deleted from "./Deleted";
 import "../../Stylesheets/Examples.css";
 import axios from "axios";
 
-function Examples({ setActive }) {
+function Examples({ setActive, setLoggedIn, loggedOut, setLoggedOut }) {
   const [register, setRegister] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [loggedOut, setLoggedOut] = useState(false);
   const [deleted, setDeleted] = useState(false);
 
   //used for the PostgreSQL to acquire the data
@@ -41,6 +38,13 @@ function Examples({ setActive }) {
     //i am using await because i want the data to be sent to the database before executing next function
     await handleRegister();
     setRegister(true);
+  };
+
+  const handleClose = () => {
+    setActive(false);
+    setRegister(false);
+    setLoggedOut(false);
+    setDeleted(false);
   };
 
   return (
@@ -84,19 +88,13 @@ function Examples({ setActive }) {
           setLoggedIn={setLoggedIn}
           errorMessage={errorMessage}
           setErrorMessage={setErrorMessage}
-        />
-      )}
-      {loggedIn && (
-        <Login
-          setLoggedIn={setLoggedIn}
-          setLoggedOut={setLoggedOut}
-          setErrorMessage={setErrorMessage}
+          setActive={setActive}
         />
       )}
       {loggedOut && <Logout setDeleted={setDeleted} />}
       {deleted && <Deleted />}
       <br />
-      <button onClick={() => setActive(false)}>Close</button>
+      <button onClick={handleClose}>Close</button>
     </div>
   );
 }

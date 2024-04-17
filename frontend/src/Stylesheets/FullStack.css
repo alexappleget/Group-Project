@@ -8,9 +8,14 @@
   color: white;
 }
 
+.fullstack-content p {
+  max-width: 1200px;
+}
+
 .fullstack-content button {
   width: 150px;
   margin-top: 30px;
+  margin-left: 10px;
   height: 50px;
   border-radius: 25px;
   background-color: #abdb2a;
@@ -18,6 +23,10 @@
   font-size: 20px;
   box-shadow: 0 0 0.5rem #abdb2a;
   border: none;
+}
+
+.fullstack-content button:hover {
+  cursor: pointer;
 }
 
 .fullstack-content button:active {

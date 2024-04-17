@@ -1,9 +1,10 @@
 import "../../Stylesheets/Login.css";
 
-function Login({ setLoggedIn, setLoggedOut, setErrorMessage }) {
+function Login({ setLoggedIn, setLoggedOut, setErrorMessage, setActive }) {
   function LoggingOut() {
     setLoggedIn(false);
     setLoggedOut(true);
+    setActive(true);
     setErrorMessage("");
   }
 

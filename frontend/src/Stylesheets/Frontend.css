@@ -8,6 +8,10 @@
   color: white;
 }
 
+.frontend-content p {
+  max-width: 1000px;
+}
+
 .frontend-content a {
   color: #abdb2a;
   margin-left: 10px;
@@ -35,6 +39,10 @@
   font-size: 20px;
   box-shadow: 0 0 0.5rem #abdb2a;
   border: none;
+}
+
+.frontend-content button:hover {
+  cursor: pointer;
 }
 
 .frontend-content button:active {
@@ -67,14 +75,4 @@
 
 .frontend-active::-webkit-scrollbar-thumb {
   background: #abdb2a;
-}
-
-.hover-btn {
-  transition: background-color 0.3s ease;
-}
-
-.hover-btn:hover {
-  border: 3px solid #abdb2a;
-  background-color: #121212;
-  color: #abdb2a;
 }
