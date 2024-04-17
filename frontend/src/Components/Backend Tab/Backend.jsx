@@ -37,13 +37,18 @@ function Backend() {
       <ul className="backendList">
         <li>
           Beginner Backend Roadmap:
-          <a href="https://roadmap.sh/backend?r=backend-beginner">
+          <a
+            href="https://roadmap.sh/backend?r=backend-beginner"
+            target="_blank"
+          >
             https://roadmap.sh/backend?r=backend-beginner
           </a>
         </li>
         <li>
           Advanced Backend Roadmap:
-          <a href="https://roadmap.sh/backend">https://roadmap.sh/backend</a>
+          <a href="https://roadmap.sh/backend" target="_blank">
+            https://roadmap.sh/backend
+          </a>
         </li>
       </ul>
       <br />

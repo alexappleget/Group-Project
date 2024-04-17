@@ -50,19 +50,24 @@ function Frontend() {
       <ul className="frontendList">
         <li>
           Beginner Frontend Roadmap:
-          <a href="https://roadmap.sh/frontend?r=frontend-beginner">
+          <a
+            href="https://roadmap.sh/frontend?r=frontend-beginner"
+            target="_blank"
+          >
             https://roadmap.sh/frontend?r=frontend-beginner
           </a>
         </li>
         <li>
           Javascript Roadmap:
-          <a href="https://roadmap.sh/javascript">
+          <a href="https://roadmap.sh/javascript" target="_blank">
             https://roadmap.sh/javascript
           </a>
         </li>
         <li>
           React Roadmap:
-          <a href="https://roadmap.sh/react">https://roadmap.sh/react</a>
+          <a href="https://roadmap.sh/react" target="_blank">
+            https://roadmap.sh/react
+          </a>
         </li>
       </ul>
       <br />
