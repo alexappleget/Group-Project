@@ -22,6 +22,13 @@ function Deleted() {
         A company will oftentimes have a specific admin who will be able to add
         and delete users to keep things extra safe and secure.
       </p>
+      <br />
+      <h2>
+        (NOTE: When you click 'Close' to close out of this, you may get a pop-up
+        from google about a data breach. It is just referring to the test
+        username and password you made for the above example. Just click 'Ok'
+        when it pops and click 'Never' for saving the information.)
+      </h2>
     </>
   );
 }
