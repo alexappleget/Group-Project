@@ -62,6 +62,7 @@ body {
 
 .navBtn:hover {
   color: #abdb2a;
+  cursor: pointer;
 }
 
 .btn-active {

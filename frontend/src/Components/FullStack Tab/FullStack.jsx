@@ -1,9 +1,13 @@
 import { useState } from "react";
 import "../../Stylesheets/FullStack.css";
 import Examples from "./Examples";
+import Login from "./Login";
 
 function FullStack() {
   const [active, setActive] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedOut, setLoggedOut] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   return (
     <div className="fullstack-content">
@@ -35,7 +39,23 @@ function FullStack() {
         and click the button below!
       </p>
       <button onClick={() => setActive(true)}>Click Here!</button>
-      {active && <Examples setActive={setActive} />}
+      {active && (
+        <Examples
+          setActive={setActive}
+          setLoggedIn={setLoggedIn}
+          loggedIn={loggedIn}
+          loggedOut={loggedOut}
+          setLoggedOut={setLoggedOut}
+        />
+      )}
+      {loggedIn && (
+        <Login
+          setActive={setActive}
+          setLoggedIn={setLoggedIn}
+          setLoggedOut={setLoggedOut}
+          setErrorMessage={setErrorMessage}
+        />
+      )}
       <br />
       <br />
       <p>

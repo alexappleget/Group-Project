@@ -7,6 +7,13 @@
   text-align: center;
   color: white;
 }
+.where-content p {
+  max-width: 1000px;
+}
+
+.where-content button:hover {
+  cursor: pointer;
+}
 
 .clickExample-btn {
   width: 150px;
@@ -21,7 +28,7 @@
   border: none;
 }
 
-.clickExample-btn:active {
+.clickExample-btn:hover {
   border: 3px solid #abdb2a;
   background-color: #121212;
   color: #abdb2a;
@@ -56,4 +63,15 @@
   border: 3px solid #abdb2a;
   background-color: #121212;
   color: #abdb2a;
+}
+
+.whereFrontend-content,
+.whereBackend-content,
+.whereFullStack-content {
+  max-width: 1000px;
+}
+
+.whereFullStack-content input,
+.whereFullStack-content button {
+  margin-left: 10px;
 }

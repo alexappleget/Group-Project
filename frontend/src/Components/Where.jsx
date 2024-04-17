@@ -25,13 +25,16 @@ function Where() {
   return (
     <div className="where-content">
       <h1>Where Can I Start?</h1>
+      <br />
       <p>
         Before we dive into that, let me explain to you the different types of
         programming. It's best to learn what each one does, and then decide from
         there. That way you know what you are getting into.
       </p>
+      <br />
       <div className="whereFrontend-content">
         <h3>Frontend</h3>
+        <br />
         <p>
           The frontend is what your users see and includes visual elements like
           buttons, checkboxes, graphics, and text messages. It allows your users
@@ -60,6 +63,7 @@ function Where() {
       </div>
       <div className="whereBackend-content">
         <h3>Backend</h3>
+        <br />
         <p>
           The backend is the data and infrastructure that make your application
           work. It stores and processes application data for your users. Some
@@ -71,6 +75,7 @@ function Where() {
       <br />
       <div className="whereFullStack-content">
         <h3>Full Stack</h3>
+        <br />
         <p>
           Full Stack is a mix of both the frontend and the backend. Try out the
           example below by inputing your email and hitting 'Send'. Then you will

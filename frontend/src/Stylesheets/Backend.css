@@ -8,6 +8,10 @@
   color: white;
 }
 
+.backend-content p {
+  max-width: 1000px;
+}
+
 .backend-content a {
   color: #abdb2a;
   margin-left: 10px;
@@ -44,6 +48,10 @@
   font-size: 20px;
   box-shadow: 0 0 0.5rem #abdb2a;
   border: none;
+}
+
+.backend-content button:hover {
+  cursor: pointer;
 }
 
 .backend-content button:active {
