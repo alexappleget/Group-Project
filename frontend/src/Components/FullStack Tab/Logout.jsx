@@ -30,13 +30,14 @@ function Logout({ setDeleted }) {
       <br />
       <p>
         For this next example, we are going to delete our registered account.
-        This comes in handy when users no longer want thier account and wish to
-        remove it. Subscription emails, some places, can be too much.
+        This feature comes in handy when users no longer want their account and
+        wish to remove it. Subscription emails, in some cases, can be
+        overwhelming.
       </p>
       <br />
       <p>
-        Let us tell the backend database to delete our account. Click the button
-        below to remove your account.
+        Let's instruct the backend database to delete our account. Click the
+        button below to remove your account.
       </p>
       <br />
       <button onClick={handleDelete}>Remove Account</button>

@@ -14,8 +14,8 @@ function FullStack() {
       <h1>You Chose Full Stack!</h1>
       <br />
       <p>
-        Full Stack is personally my favorite. It let's you build the cool
-        looking frontend, and also the backend for it as well. It let's you
+        Full stack is personally my favorite. It lets you build the cool-looking
+        frontend and also the backend for it as well. It allows you to
         understand things from both perspectives and makes you a valuable asset
         for companies.
       </p>
@@ -59,13 +59,13 @@ function FullStack() {
       <br />
       <br />
       <p>
-        For learning fullstack, I will provide a few roadmaps to follow. But, I
-        want you to follow this timeline to help you learn.
+        For learning full stack, I will provide a few roadmaps to follow.
+        However, I recommend following this timeline to help you learn.
       </p>
       <br />
       <p>
-        NOTE: It will be a lot and can easily overwhelm. AGAIN, take things one
-        at a time and I promise you will get through it. Learn the topic and
+        Note: It will be a lot and can easily overwhelm. Again, take things one
+        at a time, and I promise you will get through it. Learn the topic and
         understand it before moving on.
       </p>
       <br />

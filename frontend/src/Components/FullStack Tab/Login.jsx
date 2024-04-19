@@ -17,9 +17,8 @@ function Login({ setLoggedIn, setLoggedOut, setErrorMessage, setActive }) {
       </p>
       <br />
       <p>
-        IF and ONLY IF you are a registered user and logged in, then are you
-        able to see this log in screen. It is how websites keep things secret to
-        outside users who don't log in.
+        Only registered users who are logged in can see this login screen. It's
+        how websites keep information secure from users who haven't logged in.
       </p>
       <br />
       <p>

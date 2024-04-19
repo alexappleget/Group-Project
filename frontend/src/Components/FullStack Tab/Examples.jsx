@@ -56,14 +56,14 @@ function Examples({ setActive, setLoggedIn, loggedOut, setLoggedOut }) {
       </p>
       <br />
       <p>
-        For starters, how you ever had an account on a website that required you
-        to log in or register an account to be able to log in?
+        For starters, have you ever had an account on a website that required
+        you to log in or register an account, to be able to log in?
       </p>
       <br />
       <p>
-        Go ahead and pretend you are creating an account on a website. Go ahead
-        and use 'Test' for the username and then use 'Password123' for the
-        password. Then click 'Register'.
+        Go ahead and pretend you are creating an account on a website. Then use
+        'Test' for the username and then use 'Password123' for the password and
+        click 'Register'.
       </p>
       <label htmlFor="username">Username:</label>
       <input
