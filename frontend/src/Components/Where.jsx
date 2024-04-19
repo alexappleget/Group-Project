@@ -27,9 +27,9 @@ function Where() {
       <h1>Where Can I Start?</h1>
       <br />
       <p>
-        Before we dive into that, let me explain to you the different types of
-        programming. It's best to learn what each one does, and then decide from
-        there. That way you know what you are getting into.
+        Before we dive into that, let me explain the different types of
+        programming. It's best to understand what each one does and then decide
+        from there. That way, you know what you're getting into.
       </p>
       <br />
       <div className="whereFrontend-content">
@@ -37,11 +37,11 @@ function Where() {
         <br />
         <p>
           The frontend is what your users see and includes visual elements like
-          buttons, checkboxes, graphics, and text messages. It allows your users
-          to interact with your application. Some other examples are this entire
-          website. Everything you interact with to navigate around and click, is
-          all frontend. Go ahead and check out the button below to get a little
-          taste of what frontend can do!
+          buttons, checkboxes, graphics, and text messages. It enables your
+          users to interact with your application. Some other examples include
+          this entire website. Everything you interact with to navigate around
+          and click is all frontend. Go ahead and check out the button below to
+          get a little taste of what frontend can do!
         </p>
         <button className="clickExample-btn" onClick={() => setClicked(true)}>
           Click Me!
@@ -52,10 +52,10 @@ function Where() {
               Look what frontend can do! With just a click of a button, you can
               create a pop-up window right here on the same page. Now go ahead
               and click the button below to close the window and then move on to
-              learn about backend. There aren't any examples to show because
-              backend isn't anything visual to be seen. In order to visually see
-              examples of backend, that will tie into fullstack. Go ahead and
-              learn about full stack below!
+              learn about backend. There aren't any visual examples for backend
+              because it's not something you see directly. To visually explore
+              backend examples, you'll need to dive into full stack development.
+              Go ahead and learn about full stack below!
             </p>
             <button onClick={() => setClicked(false)}>Close</button>
           </div>
@@ -67,9 +67,9 @@ function Where() {
         <p>
           The backend is the data and infrastructure that make your application
           work. It stores and processes application data for your users. Some
-          examples are if you want to store customer information, send
-          confirmation emails to clients, or anything that you think goes on
-          "behind the scenes".
+          examples include storing customer information, sending confirmation
+          emails to clients, or handling anything that you think goes on "behind
+          the scenes".
         </p>
       </div>
       <br />
@@ -78,12 +78,12 @@ function Where() {
         <br />
         <p>
           Full Stack is a mix of both the frontend and the backend. Try out the
-          example below by inputing your email and hitting 'Send'. Then you will
-          receive an email. This is full stack! You build the backend part to
-          send an email and then build the frontend. The frontend provides the
-          input field, for you to enter in your email, and then the button to
-          click that will send the email. Go ahead and give it a try! Input your
-          email and click send!
+          example below by inputting your email and hitting 'Send'. Then you
+          will receive an email. This is full stack! You build the backend part
+          to send an email and then build the frontend. The frontend provides
+          the input field for you to enter your email and the button to click to
+          send the email. Go ahead and give it a try! Input your email and click
+          send!
         </p>
         <br />
         <br />

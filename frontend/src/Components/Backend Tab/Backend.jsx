@@ -24,8 +24,8 @@ function Backend() {
       <br />
       <p>
         For learning backend, I would first start with the beginner roadmap and
-        then move on to the more advanced once. Again, take things one at a time
-        to not risk being overwhelmed.
+        then move on to the more advanced one. Again, take things one at a time
+        to not get overwhelmed.
       </p>
       <br />
       <p className="backend-p">
@@ -66,10 +66,10 @@ function Backend() {
           <p>
             Backend can create a database. A database is something you can store
             information. For example, when you create an account on a website.
-            When you register, your information goes into that websites database
-            to be stored. That way whenever you go to log in, the website scans
-            the database and sees that the username and password match what is
-            in their database. Then allows you to log in.
+            When you register, your information goes into that website's
+            database to be stored. That way whenever you go to log in, the
+            website scans the database and sees that the username and password
+            match what is in their database. Then allows you to log in.
           </p>
           <br />
           <p>

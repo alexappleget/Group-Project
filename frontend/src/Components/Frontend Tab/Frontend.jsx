@@ -22,13 +22,13 @@ function Frontend() {
       <br />
       <p>
         In order to learn frontend, you must first start by learning HTML and
-        CSS. Once you have tackled that, Javascript is your next task. Learn
-        basic HTML and CSS first before diving deeper into Javascript. When you
-        start to get into javascript, it is definitely a lot to learn and can be
+        CSS. Once you have tackled that, JavaScript is your next task. Learn
+        basic HTML and CSS first before diving deeper into JavaScript. When you
+        start to get into JavaScript, it is definitely a lot to learn and can be
         overwhelming if you take too much on at once. Just take things one at a
         time and don't move on until you understand everything. If you keep
-        moving on and you're still a little confused about something, it'll keep
-        piling on and get worse.
+        moving on and you're still a little confused about something, it will
+        keep piling on and get worse.
       </p>
       <br />
       <p>
@@ -36,15 +36,15 @@ function Frontend() {
         becoming a developer. This timeline will include links to developer
         roadmaps to follow, so you don't get lost. Go through the Frontend
         Beginner Roadmap first. Learn HTML and then CSS. Once you get familiar
-        with it, move on to the javascript roadmap. The javascript roadmap is A
-        LOT to take in and can be overwhelming, but just take it one thing at a
-        time. Once you have finished the javascript roadmap, go back to the
+        with it, move on to the JavaScript roadmap. The JavaScript roadmap is a
+        lot to take in and can be overwhelming, but just take it one thing at a
+        time. Once you have finished the JavaScript roadmap, go back to the
         frontend beginner roadmap and continue on down the path. Once you get to
         frameworks, go ahead and start your journey learning React! Believe it
-        or not, this web app was actually built using React. React is the most
-        popular to learn and can do many things. Go ahead and get started
-        learning! If you feel lost, please go to the 'Contact Us' page and reach
-        out.
+        or not, this web application was actually built using React. React is
+        the most popular to learn and can do many things. Go ahead and get
+        started learning! If you feel lost, please go to the 'Contact Us' page
+        and reach out.
       </p>
       <br />
       <ul className="frontendList">
